@@ -4,7 +4,7 @@ import 'package:validators/validators.dart';
 void main() {
   group('Validator function', () {
     test('stops on first failure', () {
-      final msg = Validator([
+      final msg = validators([
         IsRequired(),
         MinLength(500),
       ])('');
@@ -12,7 +12,7 @@ void main() {
     });
 
     test('support optional felids', () {
-      final msg = Validator(
+      final msg = validators(
         [
           IsOptional(),
           IsRequired(),
@@ -20,7 +20,7 @@ void main() {
       )('');
       expect(msg, equals(null));
 
-      final msg2 = Validator(
+      final msg2 = validators(
         [
           IsOptional(),
           MaxLength(1),
@@ -29,7 +29,7 @@ void main() {
       expect(msg2, isA<String>());
     });
     test('returns the first error message', () {
-      final msg = Validator([
+      final msg = validators([
         IsRequired('this field is required'),
         MaxLength(1),
       ])('');
@@ -41,7 +41,7 @@ void main() {
       () {
         bool getsCalled = false;
 
-        Validator(
+        validators(
           [IsOptional(), MaxLength(1)],
           onFail: (input, rules, rule) {
             getsCalled = true;

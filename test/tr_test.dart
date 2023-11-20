@@ -6,7 +6,7 @@ void main() {
   test(
     'if there is no onSpectefic ti returns the toString result',
     () {
-      final func = Validator([IsRequired()]);
+      final func = validators([IsRequired()]);
       final msg = func('');
       expect(msg, 'required');
     },
@@ -14,7 +14,7 @@ void main() {
   test(
     'it can override the message',
     () {
-      final func = Validator([IsRequired()]);
+      final func = validators([IsRequired()]);
       final msg = func('');
       expect(msg, 'required');
       ValidatorsLocalization.on<IsRequired>((rule) => 'new_msg');
