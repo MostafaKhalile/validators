@@ -1,7 +1,7 @@
 import 'package:validators/validators.dart';
 
-class IsArabicChars extends TextValidationRule {
-  IsArabicChars([String? error]) : super(error);
+class IsValidEmail extends TextValidationRule {
+  IsValidEmail([String? error]) : super(error);
 
   @override
   bool isValid(String input) => isValidEmail(input);
