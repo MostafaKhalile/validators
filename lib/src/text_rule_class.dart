@@ -1,9 +1,4 @@
-///  interface for the queen validation rules
-///  extend it and implement :
-///   `isValid` to override the validation logic
-///   `translatedError` return translated message from nations
-///   `nationsKey` return key to use with nations
-///
+///  interface for the  validation rules
 
 abstract class TextValidationRule {
   ///  message to show case validations fails

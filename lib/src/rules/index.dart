@@ -6,6 +6,9 @@ export 'dates/date_after.dart';
 export 'dates/is_date.dart';
 export 'dates/is_date_mills.dart';
 
+/// * Email
+export 'emails/is_valid_email.dart';
+
 /// * languages
 export 'languages/is_ltr_language.dart';
 export 'languages/is_rtl_language.dart';
@@ -34,6 +37,7 @@ export 'phone/is_ksa_number.dart';
 export 'text/contains.dart';
 export 'text/ends_with.dart';
 export 'text/is_empty.dart';
+export 'text/is_mix_of_letters_and_numbers.dart';
 export 'text/is_not_empty.dart';
 export 'text/match.dart';
 export 'text/max_length.dart';

@@ -7,7 +7,7 @@ class IsValidEmail extends TextValidationRule {
   bool isValid(String input) => isValidEmail(input);
 
   @override
-  String toString() => 'validation.is_arabic_chars';
+  String toString() => 'please Enter a valid E-mail';
 }
 
 bool isValidEmail(String input) => RegExp(
